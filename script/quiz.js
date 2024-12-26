@@ -14,5 +14,17 @@ let form = document.getElementById("form").addEventListener("submit",async()=>{
  }catch(err){
     console.log("err",err)
  }
-});
+})
+
+let getData = document.getElementById("btn").addEventListener("click",async()=>{
+    let res = await fetch ("https://silken-wobbly-muenster.glitch.me/question",{
+        method:"GET",
+       
+    })
+    let data = await res.json()
+    console.log(data)
+   
+})  
+
+
 
